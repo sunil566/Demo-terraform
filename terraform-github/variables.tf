@@ -17,3 +17,8 @@ variable "vpc_id" {
 variable "tag" {
   type = string
 }
+
+variable "shutdown" {
+  type    = bool
+  default = false
+}

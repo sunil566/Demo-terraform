@@ -25,6 +25,7 @@ resource "aws_instance" "test-server" {
   subnet_id              = var.subnet_id
   vpc_security_group_ids = ["${aws_security_group.test-sg.id}"]
   tags = {
-    Name = var.tag
+    Name     = var.tag
+    shutdown = var.shutdown ? "true" : "false"
   }
 }
